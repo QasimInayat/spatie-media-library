@@ -17,10 +17,13 @@
 <pre>composer require intervention/image</pre>
 
 <p>By default conversion will be work through Que</p>
-
-# Start queue worker
+<p>Start queue worker</p>
 <pre>php artisan queue:work</pre>
 
-# Or for development
+<p>Or for development</p>
 <pre>php artisan queue:listen</pre>
+<pre>
+composer require spatie/image<br>
+php artisan media-library:regenerate
+</pre>
 
