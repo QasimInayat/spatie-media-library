@@ -17,7 +17,11 @@ class TodoResource extends JsonResource
             'is_done'    => (bool) $this->is_done,
             'due_date'   => $this->due_date,
             'priority'   => $this->priority,
-            'image'      => $this->getFirstMediaUrl('image'),
+            'image' => [
+                'original' => $this->getFirstMediaUrl('image'),
+                'thumb'    => $this->getFirstMediaUrl('image', 'thumb'),
+                'medium'   => $this->getFirstMediaUrl('image', 'medium'),
+            ],
             'created_at' => $this->created_at?->toIso8601String(),
             'updated_at' => $this->updated_at?->toIso8601String(),
         ];

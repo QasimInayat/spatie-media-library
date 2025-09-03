@@ -11,3 +11,16 @@
     FILESYSTEM_DISK=public<br>
     APP_URL=http://localhost
 </pre>
+
+
+## Image Conversion
+<pre>composer require intervention/image</pre>
+
+<p>By default conversion will be work through Que</p>
+
+# Start queue worker
+<pre>php artisan queue:work</pre>
+
+# Or for development
+<pre>php artisan queue:listen</pre>
+
