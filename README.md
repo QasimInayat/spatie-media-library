@@ -1,14 +1,18 @@
-## Laravel PEST
-<p>Installation</p>
+## Installation
+<pre>composer require spatie/laravel-medialibrary</pre>
+<pre>php artisan vendor:publish --provider="Spatie\MediaLibrary\MediaLibraryServiceProvider" --tag="migrations"</pre>
+<pre>php artisan migrate</pre>
+<pre>php artisan vendor:publish --provider="Spatie\MediaLibrary\MediaLibraryServiceProvider" --tag="config"</pre>
+<pre>php artisan storage:link</pre>
+<p>See <a href="https://spatie.be/docs/laravel-medialibrary/v11/installation-setup">Spatie Media Library Installation and Setup Guide</a></p>
+'public' => [
+    'driver' => 'local',
+    'root' => storage_path('app/public'),
+    'url' => env('APP_URL').'/storage',
+    'visibility' => 'public',
+],
+- .env
 <pre>
-composer require pestphp/pest --dev --with-all-dependencies<br>
-composer require pestphp/pest-plugin-laravel --dev<br>
-./vendor/bin/pest --init
-</pre>
-
-
-## Test Logic
-<pre>
-php artisan test --testsuite=Unit<br>
-./vendor/bin/pest tests/Unit/SlugServiceTest.php
+    FILESYSTEM_DISK=public<br>
+    APP_URL=http://localhost
 </pre>
